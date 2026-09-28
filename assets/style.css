@@ -1,0 +1,243 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: 'Montserrat', sans-serif;
+     background-color: #ffffff;
+     color: #333;
+     min-height: 100vh;
+     position: relative;
+ }
+ .rank a {
+     text-decoration: none;
+     color: inherit;
+}
+
+ .bg-top {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: auto;
+     z-index: -1;
+ }
+
+ .bg-bottom {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: auto;
+     z-index: -1;
+ }
+
+ .circle {
+     position: absolute;
+     border-radius: 50%;
+     background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+     z-index: -1;
+ }
+
+ .circle-1 {
+     width: 80px;
+     height: 80px;
+     top: 100px;
+     right: 35%;
+     box-shadow: 0 10px 20px rgba(0, 190, 255, 0.3);
+ }
+
+ .circle-2 {
+     width: 30px;
+     height: 30px;
+     top: 190px;
+     right: 32%;
+ }
+
+ .circle-3 {
+     width: 120px;
+     height: 120px;
+     bottom: 250px;
+     left: 25%;
+     box-shadow: 0 10px 20px rgba(0, 190, 255, 0.3);
+ }
+
+ .circle-4 {
+     width: 40px;
+     height: 40px;
+     bottom: 350px;
+     left: 32%;
+ }
+
+ .container {
+     max-width: 1000px;
+     margin: 5% auto;
+     padding: 3%;
+     background: rgba(255, 255, 255, 0.95);
+     border-radius: 20px;
+     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+     backdrop-filter: blur(10px);
+     min-height: 50vh;
+ }
+
+ h1 {
+     text-align: center;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     color: #111;
+     margin-bottom: 10px;
+ }
+
+ p.subtitle {
+     text-align: center;
+     color: #666;
+     margin-bottom: 40px;
+ }
+
+ /* Loading Message */
+ #loading-msg {
+     text-align: center;
+     font-size: 18px;
+     color: #4facfe;
+     padding: 50px;
+ }
+
+ /* LIST & DETAIL VIEWS */
+ #list-section,
+ #detail-section {
+     display: none;
+ }
+
+ .search-bar {
+     width: 100%;
+     padding: 12px 20px;
+     margin-bottom: 20px;
+     border: 1px solid #ddd;
+     border-radius: 30px;
+     font-size: 16px;
+     box-sizing: border-box;
+ }
+
+ .list-item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 25px;
+     background: white;
+     border-radius: 12px;
+     margin-bottom: 15px;
+     cursor: pointer;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+     border-left: 5px solid #4facfe;
+     transition: 0.2s;
+ }
+
+ .list-item:hover {
+     transform: translateX(5px);
+ }
+
+ .item-main {
+     font-weight: 700;
+     font-size: 18px;
+ }
+
+ .item-sub {
+     font-size: 14px;
+     color: #777;
+ }
+
+ .item-belt {
+     background: #e0f2fe;
+     color: #0284c7;
+     padding: 5px 15px;
+     border-radius: 20px;
+     font-weight: 600;
+ }
+
+ .back-btn {
+     background: none;
+     border: none;
+     color: #4facfe;
+     font-size: 16px;
+     font-weight: 600;
+     cursor: pointer;
+     margin-bottom: 20px;
+ }
+
+ .profile-header {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     gap: 30px;
+     margin-bottom: 30px;
+     padding: 25px;
+     background: #fdfdfd;
+     border-radius: 15px;
+     border: 1px solid #eee;
+ }
+
+ .profile-pic {
+     width: 200px;
+     border-radius: 10%;
+     object-fit: cover;
+     border: 4px solid #4facfe;
+     background-color: #f0f4f8;
+ }
+
+ .detail-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+     gap: 15px;
+ }
+
+ .detail-card {
+     background: #fdfdfd;
+     padding: 15px;
+     border-radius: 10px;
+     border: 1px solid #eee;
+ }
+
+ .detail-label {
+     font-size: 11px;
+     color: #888;
+     text-transform: uppercase;
+     margin-bottom: 5px;
+ }
+
+ .detail-value {
+     font-size: 15px;
+     font-weight: 600;
+ }
+
+ .list-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.list-thumb {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    object-fit: cover;        /* crops instead of stretching */
+    border-radius: 12px;
+    background: #edf2f7;
+}
+
+.item-info {
+    flex: 1;                  /* pushes the belt badge to the right */
+    min-width: 0;
+}
+
+ @media screen and (max-width: 633px) {
+
+     .profile-pic,
+     .profile-info {
+         margin: 0px auto;
+     }
+
+     .profile-info p {
+         text-align: center;
+
+     }
+ }
