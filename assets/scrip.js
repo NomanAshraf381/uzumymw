@@ -3,6 +3,9 @@
 let globalData = [];
 let headers = [];
 
+// Remember the scroll position of the personnel list
+let listScrollPosition = 0;
+
 const COL_DESIGNATION = 1;
 const COL_NAME = 2;
 const COL_BELT = 3;
@@ -124,9 +127,18 @@ function filterList() {
 }
 
 // --- DETAIL VIEW ---
+
 function showDetails(row) {
+
+    // Remember where the user was in the list
+    listScrollPosition = window.scrollY;
+
     document.getElementById('list-section').style.display = 'none';
     document.getElementById('detail-section').style.display = 'block';
+
+    // Start detail page from the top
+    window.scrollTo(0, 0);
+
 
     let beltNo = row[COL_BELT] || 'N/A';
 
@@ -182,8 +194,10 @@ function showDetails(row) {
 function showList() {
     document.getElementById('detail-section').style.display = 'none';
     document.getElementById('list-section').style.display = 'block';
-}
 
+    // Restore the previous list position
+    window.scrollTo(0, listScrollPosition);
+}
 // --- PHOTO LOADER (tries each format, then falls back to default avatar) ---
 function loadPhoto(imgElement, beltNo) {
     let index = 0;
