@@ -121,13 +121,14 @@
  .list-item {
      display: flex;
      justify-content: space-between;
+     flex-wrap: wrap;
      align-items: center;
      padding: 15px 25px;
      background: white;
      border-radius: 12px;
      margin-bottom: 15px;
      cursor: pointer;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+     box-shadow: 0 5px 15px rgba(20, 20, 20, 0.089);
      border-left: 5px solid #4facfe;
      transition: 0.2s;
  }
@@ -209,10 +210,15 @@
      font-weight: 600;
  }
 
+ #list-container img{
+    max-height: 300px;
+    width: auto;
+ }
  .list-item {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
+    width: auto;
 }
 
 .list-thumb {
